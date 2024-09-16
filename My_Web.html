@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        
+        .rect 
+        {
+            background-color: rgb(27, 69, 29);
+            height: 50px;
+            width: 100%; 
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            overflow: hidden;
+        }
+        .rect div 
+        {
+            color: white;
+            padding: 0 20px;
+        }
+        .rect div:first-child 
+        {
+            margin-left: 20px; 
+        }
+        .rect div:hover 
+        {
+            background-color: #333; 
+            border-radius: 5px; 
+            transform: scale(1.1); 
+        }
+        .bg
+        {
+            position: absolute;
+            z-index: -100;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+        }
+        .poly
+        {
+            background-color: rgb(98, 108, 46);
+            height: 400px;
+            width: 80%; 
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <video class="bg" autoplay muted loop id="back" src="1.mp4"></video>
+    <nav class="rect">
+        <div>Home</div>
+        <div>Skills</div>
+        <div>Contact</div>
+    </nav>
+    <!-- <div class="poly"> -->
+
+    </div>
+
+    <script>
+        let vid = document.getElementById("back");
+        vid.playbackRate =0.5;
+    </script>
+</body>
+</html>
